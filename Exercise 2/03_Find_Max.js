@@ -1,4 +1,4 @@
-const findLongest = (arr) => {
+const findLargest = (arr) => {
     size = arr.length;
     let max = 0;
     for(let i=0; i<size; i++){
@@ -9,5 +9,5 @@ const findLongest = (arr) => {
     return max;
 }
 
-let maxNum = findLongest([1, 2, 5, 3, 4]);
+let maxNum = findLargest([1, 2, 5, 3, 4]);
 console.log(maxNum);
