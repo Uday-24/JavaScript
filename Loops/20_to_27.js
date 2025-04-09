@@ -71,3 +71,27 @@ for(i=size; i>=1; i--){
     }
     console.log(pyramid);
 }
+
+console.log();
+console.log();
+
+size = 5;
+for(i=1; i<=size; i++){
+    pyramid = "";
+    for(j=i; j<=size; j++){
+        pyramid += (j%2) + " ";
+    }
+    console.log(pyramid);
+}
+
+console.log();
+console.log();
+
+size = 5;
+for(i=1; i<=size; i++){
+    pyramid = "";
+    for(j=i; j<=size; j++){
+        pyramid += i + " ";
+    }
+    console.log(pyramid);
+}
