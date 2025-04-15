@@ -61,3 +61,36 @@ for(i=1; i<=size; i++){
     }
     console.log(pyramid);
 }
+
+console.log();
+console.log();
+
+for(i=101; i>=97; i--){
+    pyramid = "";
+    for(j=97; j<=i; j++){
+        pyramid += " " + String.fromCharCode(i);
+    }
+    console.log(pyramid);
+}
+
+console.log();
+console.log();
+
+for(i=65; i<=69; i++){
+    pyramid = "";
+    for(j=i; j<=69; j++){
+        pyramid += " " + String.fromCharCode(i);
+    }
+    console.log(pyramid);
+}
+
+console.log();
+console.log();
+
+for(i=69; i>=65; i--){
+    pyramid = "";
+    for(j=65; j<=i; j++){
+        pyramid += " " + String.fromCharCode(i);
+    }
+    console.log(pyramid);
+}
