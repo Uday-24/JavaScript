@@ -5,8 +5,7 @@ const isPalindrome = (num) => {
     while(temp > 0){
         let rem = temp % 10;
         reversed = (reversed*10) + rem;
-        temp /= 10;
-        temp = Math.floor(temp);
+        temp = Math.floor(temp / 10);
     }
     if(reversed == num) return true;
     else return false;
