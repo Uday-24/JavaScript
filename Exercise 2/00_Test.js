@@ -1,14 +1,13 @@
-function isArmStrong(num){
-    let temp = num;
-    let rem = 0;
-    let total = 0;
-    while(temp > 0){
-        rem = temp % 10;
-        total += rem**3;
-        temp = Math.floor(temp/10);
+function compareTriplets(a, b) {
+    let res = [0, 0];
+    for(let i=0; i<=a.length; i++){
+        if(a[i] > b[i]){
+            res[0]++;
+        }else if(a[i] < b[i]){
+            res[1]++;
+        }
     }
-    if(total === num) return true;
-    else return false;
+    return res;
 }
 
-console.log(isArmStrong(153));
+console.log(compareTriplets([1, 5, 3], [3, 2, 1]));
