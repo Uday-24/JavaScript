@@ -7,27 +7,14 @@ const arr = [
   [ 0, 0, 1, 2, 4, 0 ]
 ]
 
-let r1 = [];
-let r2 = [];
-let r3 = [];
-let hourglasses = [];
-let tempArr = [];
-for(let i=0; i<arr.length - 2; i++){
-    // console.log(arr[i]);
-    r1 = arr[i];
-    r2 = arr[i+1];
-    r3 = arr[i+2];
-    for(let j=0; j<r1.length; j++){
-        // console.log(arr[i][j]);
-        for(let k=j; k<=j+2; k++){
-            // console.log(r1[k]);
-            tempArr.push(r1[k]);
-            tempArr.push(r3[k]);
-        }
-        tempArr.push(r2[j+1]);
-        hourglasses.push(tempArr);
-        tempArr = [];
+let maxSum = -Infinity;
+
+for(let i=0; i<=3; i++){
+    for(let j=0; j<=3; j++){
+        let top = arr[i][j] + arr[i][j+1] + arr[i][j+2];
+        let middle = arr[i+1][j+1];
+        let bottom = arr[i+2][j] + arr[i+2][j+1] + arr[i+2][j+2]
+        let total = top + middle + bottom;
+        maxSum = Math.max(maxSum, total);
     }
 }
-
-// console.log(hourglasses);
